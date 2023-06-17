@@ -1,72 +1,78 @@
-<?php
-session_start();
-if(!isset($_SESSION['email'])){
-    header("Location:login.php");
-    echo "<script>alert('You must log in first')</script>";
-}
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report your problem here</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Report Problem</title>
 </head>
-<body>
-    <?php include('nav.php'); ?>
-    <h2>Report your Problem</h2>
-    <form method = "POST" action = "process.php" enctype="multipart/form-data">
-    <label for="Problem Category">Choose the category</label>
-    <select name="problemcat" id="problemcat">
-        <option value = "education">Education</option>
-        <option value = "infrastructures">Infrastructures</option>
-        <option value = "electricity">Electricity</option>
-        <option value = "land use">Land Use</option>
-        <option value = "health">Health</option>
-        <option value = "water supply">Water Supply</option>
-        <option value = "drainage">Drainage</option>  
-        <option value = "culture and religion">Culture and Religion</option>
-        <option value = "others">Others</option>      
-
-    </select>
-    <br><br>
-
-
-     <textarea id="problem" name="problem" rows="4" cols="50">Explain your problem here</textarea>
-     <br><br>
-     <input type="file" name="imageFile"><br><br>
-
-     How much emergency is your problem?<br>
-
-    <label for="emer">Emergency Status:</label>
-        <select name="emer" id="emer">
-        <option value="notemer">Not emergency</option> 
-            <option value="emergency">High Emergency</option>
-                     
-        </select><br>
-
-    <br><br>
-
-
-
-    Which way you want to provide the address?<br>
-    <input type="radio" name="locationOption" id="currentLocationOption" value="currentLocation" >
-        <label for="currentLocationOption">Use Current Location</label><br>
+<body class="bg-blue-100">
+    <main class="h-screen">
+        <div class=" mt-10  ">
+            <p class="text-center text-blue-600 text-4xl font-serif font-semibold cursor-pointer" >Report Problem</p>
+        </div>
+        <div class=" flex justify-center mt-10 ">
+            <form action="" method="post" class=" bg-white shadow-2xl rounded-lg ">
+                <div>
+                    <label for="Problem Category" class=" text-xl m-3">Choose the category</label>
+                    <select name="problemcat" id="problemcat" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2">
+                        <option value = "education">Education</option>
+                        <option value = "infrastructures">Infrastructures</option>
+                        <option value = "electricity">Electricity</option>
+                        <option value = "land use">Land Use</option>
+                        <option value = "health">Health</option>
+                        <option value = "water supply">Water Supply</option>
+                        <option value = "drainage">Drainage</option>  
+                        <option value = "culture and religion">Culture and Religion</option>
+                        <option value = "others">Others</option>      
+                    
+                    </select>
+                </div>
+                <div class="flex justify-center items-center">
+                    <textarea  id="problem" name="problem" placeholder="Explain your problem here" class="h-20 w-11/12  rounded-md m-3 border-gray-400 border-2"></textarea>
+                
+                </div>
+                <div>
+                    <label class="text-xl m-3" for="image">Insert Image</label> <br>
+                    <input type="file" name="image" id="image" class="text-xl m-3">
+                </div>
+                <div>
+                    <p class="text-xl m-3">How much emergency is your problem?</p>
+                    <label for="emer" class="text-xl m-3">Emergency Status:</label>
+                    <select name="emer" id="emer" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2">
+                    <option value="notemer">Not emergency</option> 
+                    <option value="emergency" >High Emergency</option>             
+                    </select>
+                </div>
+                <div>
+                    <p class="text-xl m-3">Which way you want to provide the address?</p>
+                    <div class="text-xl m-3">
+                        <input type="radio" name="locationOption" id="currentLocationOption" value="currentLocation" >
+                        <label for="currentLocationOption">Use Current Location</label> <br>
+                        <input type="radio" name="locationOption" id="customLocationOption" value="customLocation"> 
+                        <label for="customLocationOption">Enter Custom Address:</label> 
+                        <input class="border-gray-400 border-2 rounded-md" type="text" name="address" id="address"><br>
+                    
+                    </div>
+                    <div class="text-xl m-3 ">
+                        <input class="border-gray-400 border-2 m-2 rounded-md" name="latitude" id="latitude" placeholder="Latitude"> <br>
+                        <input class="border-gray-400 border-2 m-2 rounded-md" name="longitude" id="longitude" placeholder="Longitude">
+                    
+                    </div>
+                    <div class="flex justify-center m-6">
+                        <input class="bg-lime-500  text-white font-semibold text-xl h-14 w-52 rounded-md hover:bg-lime-600 items-center mx-auto " type="submit" value="Submit" name="submit">
+                    
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
         
-        <input type="radio" name="locationOption" id="customLocationOption" value="customLocation">
-        <label for="customLocationOption">Enter Custom Address:</label> 
-        <input type="text" name="address" id="address"><br>
-
-
-
-        <input type="" name="latitude" id="latitude">
-        <input type="" name="longitude" id="longitude">
-<br><br>
-
-        <input type="submit" value="Submit">
+    </main>
+    <footer>
+        <?php
+        include('footer.php');
+        ?>
+    </footer>
 </body>
 </html>

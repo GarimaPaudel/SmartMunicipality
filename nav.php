@@ -1,39 +1,46 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Index</title>
 </head>
-<body>
-    <div class="bg-blue-100">
-        <p class=" flex justify-center text-center text-red-200 text-2xl bg-blue-950">Smart Municipality</p>
-    </div>
-    <div class=" bg-white flex h-auto w-auto flex-col justify-center  ">
-        <p class="text-center m-6 text-red-600 text-4xl font-serif font-semibold cursor-pointer">Welcome to the Smart Municipality Homepage :)</p>
-        <nav >
+<body class="bg-blue-100">
+ 
+        
+   <main >
+    <div class=" flex h-auto w-auto flex-col justify-center bg-blue-950 ">
+    <?php if(!isset($_SESSION['email'])){ 
+echo "<a class='text-white text-xl underline m-3'>Welcome Guest</a>";
+        }
+        else{  
+           echo "<a  href='' class='text-white text-xl underline m-3'>Welcome: " .$_SESSION['email']." </a>" ;
+    }  
+
+?>
+        <p class="text-center m-6 text-white text-4xl font-serif font-semibold cursor-pointer">Welcome to the Smart Municipality Homepage </p>
+        <nav class="cursor-pointer">
             <div class="flex justify-center items-center">
-            <ul class="flex items-center justify-center">
-                <li class="m-6 bg-red-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md">Welcome Guest</li>
+            <ul class="flex items-center justify-center ">
              
-                
-                <li class="m-6 bg-red-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md">Report your Problem</li>
-                <li class="m-6 bg-red-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md">View Reports</li>
-                <li class="m-6 bg-red-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md">Log In</li>
+                <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="report_problems.php">Report your problem</a></li>
+                <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="view_reports.php">View Reports</a></li>
+                <?php 
+                if(isset($_SESSION['email'])){
+                   echo "<li class='m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md'> <a href='report_problem.php'> <a href='logout.php'>Log Out</li></a>" ;
+                }
+                else{
+                    echo " <li class='m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md'> <a href='report_problem.php'> <a href='login.php'>Log In</li>  </a> ";
+
+                }  ?>
             </ul>
             </div>
         </nav>
     </div>
-</body>
-</html>
+    </main>
+    
+
 </body>
 </html>
