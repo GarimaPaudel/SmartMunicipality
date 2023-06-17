@@ -7,15 +7,15 @@
     <title>Report Problem</title>
 </head>
 <body class="bg-blue-100">
-    <main class="h-screen">
+    <main class="min-h-screen">
         <div class=" mt-10  ">
             <p class="text-center text-blue-600 text-4xl font-serif font-semibold cursor-pointer" >Report Problem</p>
         </div>
         <div class=" flex justify-center mt-10 ">
-            <form action="" method="post" class=" bg-white shadow-2xl rounded-lg ">
+            <form action="" method="post" class=" bg-white shadow-2xl rounded-lg w-96 ">
                 <div>
                     <label for="Problem Category" class=" text-xl m-3">Choose the category</label>
-                    <select name="problemcat" id="problemcat" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2">
+                    <select name="problemcat" id="problemcat" class="h-14 w-full rounded-md m-3 border-gray-400 border-2">
                         <option value = "education">Education</option>
                         <option value = "infrastructures">Infrastructures</option>
                         <option value = "electricity">Electricity</option>
@@ -29,7 +29,7 @@
                     </select>
                 </div>
                 <div class="flex justify-center items-center">
-                    <textarea  id="problem" name="problem" placeholder="Explain your problem here" class="h-20 w-11/12  rounded-md m-3 border-gray-400 border-2"></textarea>
+                    <textarea  id="problem" name="problem" placeholder="Explain your problem here" class="h-20 w-full rounded-md m-3 border-gray-400 border-2"></textarea>
                 
                 </div>
                 <div>
@@ -39,7 +39,7 @@
                 <div>
                     <p class="text-xl m-3">How much emergency is your problem?</p>
                     <label for="emer" class="text-xl m-3">Emergency Status:</label>
-                    <select name="emer" id="emer" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2">
+                    <select name="emer" id="emer" class="h-14 w-full rounded-md m-3 border-gray-400 border-2">
                     <option value="notemer">Not emergency</option> 
                     <option value="emergency" >High Emergency</option>             
                     </select>
@@ -71,7 +71,7 @@
     </main>
     <footer>
         <div >
-            <p class=" flex justify-center text-center font-semibold text-white text-2xl bg-blue-950">Smart Municipality  <span>&#169;</span> 2023</p>
+            <p class=" flex justify-center text-center font-semibold text-white text-2xl bg-blue-950 py-4">Smart Municipality  <span>&#169;</span> 2023</p>
            
         </div>
         

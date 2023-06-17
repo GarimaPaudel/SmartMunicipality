@@ -8,67 +8,69 @@
 </head>
 
 <body class="bg-blue-100">
-    <main class="h-screen">
-        <div class=" flex h-auto w-auto flex-col justify-center bg-blue-950 ">
+    <main class="min-h-screen">
+        <div class=" flex flex-col items-center py-6 bg-blue-950 ">
             <p class="text-center m-6 text-white text-4xl font-serif font-semibold cursor-pointer">Welcome to the Admin Dashboard</p>
             <nav class="cursor-pointer" >
                 <div class="flex justify-center items-center">
-                <ul class="flex items-center justify-center ">
+                    <ul class="flex items-center justify-center ">
                  
-                    <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="report_problem.php">Normal Issues</a></li>
-                    <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="view_reports.php">Emergency Issues</a></li>
-                    <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="index.php">Home</a></li>
-   
-                 </ul>
+                        <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="report_problem.php">Normal Issues</a></li>
+                        <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="view_reports.php">Emergency Issues</a></li>
+                        <li class="m-6 bg-blue-500 hover:bg-blue-600 text-white text-xl h-14 w-52 flex justify-center items-center rounded-md"> <a href="index.php">Home</a></li>
+       
+                     </ul>
                 </div>
             </nav>
         </div>
         
         <h2 class=" text-blue-950 text-xl underline m-3 text-center cursor-pointer" >All Issues</h2>
-        <table class="table-fixed text-center  border-separate border border-slate-500">
-            <thead>
-            <tr>
-                <th class="border h-10 w-96 border-slate-600" >S.N</th>
-                <th class="border h-10 w-96 border-slate-600">UserEmail</th>
-                <th class="border h-10 w-96 border-slate-600">Problem_category</th>
-                <th class="border h-10 w-96 border-slate-600">Problem_description</th>
-                <th class="border h-10 w-96 border-slate-600">Address</th>
-                <th class="border h-10 w-96 border-slate-600">Emergency_status</th>
-                <th class="border h-10 w-96 border-slate-600">latitude</th>
-                <th class="border h-10 w-96 border-slate-600">longitude</th>
-                <th class="border h-10 w-96 border-slate-600">Timestamp</th>
-                <th class="border h-10 w-96 border-slate-600">ProblemImage</th>
-                <th class="border h-10 w-96 border-slate-600">Solved/Not?</th>
-                <th class="border h-10 w-96 border-slate-600">View in Map</th>
-
-            </tr>
-            </thead>
-            <tbody>
-               <tr>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-                <td class="border h-10 w-96 border-slate-600">
-                    <input class="bg-lime-700 rounded-md text-white h-6 w-16" type="submit" name="solve" value="Solve">
-                </td>
-                <td class="border h-10 w-96 border-slate-600"></td>
-              
-               </tr>
-               
-            </tbody>
-
-        </table>
+        <div class="overflow x-auto">
+            <table class="table-fixed text-center w-full border-separate border border-slate-500">
+                <thead>
+                <tr>
+                    <th class="border h-10 w-1/12 border-slate-600" >S.N</th>
+                    <th class="border h-10 w-1/12 border-slate-600">UserEmail</th>
+                    <th class="border h-10 w-1/12 border-slate-600">Problem_category</th>
+                    <th class="border h-10 w-1/12 border-slate-600">Problem_description</th>
+                    <th class="border h-10 w-1/12 border-slate-600">Address</th>
+                    <th class="border h-10 w-1/12 border-slate-600">Emergency_status</th>
+                    <th class="border h-10 w-1/12 border-slate-600">latitude</th>
+                    <th class="border h-10 w-1/12 border-slate-600">longitude</th>
+                    <th class="border h-10 w-1/12 border-slate-600">Timestamp</th>
+                    <th class="border h-10 w-1/12 border-slate-600">ProblemImage</th>
+                    <th class="border h-10 w-1/12 border-slate-600">Solved/Not?</th>
+                    <th class="border h-10 w-1/12 border-slate-600">View in Map</th>
+    
+                </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                    <td class="border h-10 w-1/12 border-slate-600">
+                        <input class="bg-lime-700 rounded-md text-white h-6 w-16" type="submit" name="solve" value="Solve">
+                    </td>
+                    <td class="border h-10 w-1/12 border-slate-600"></td>
+                  
+                   </tr>
+                   
+                </tbody>
+    
+            </table>
+        </div>
     </main>
     <footer>
         <div >
-            <p class=" flex justify-center text-center font-semibold text-white text-2xl bg-blue-950">Smart Municipality  <span>&#169;</span> 2023</p>
+            <p class=" flex justify-center text-center font-semibold text-white text-2xl bg-blue-950 py-4">Smart Municipality  <span>&#169;</span> 2023</p>
            
         </div>
     </footer>
