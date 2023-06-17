@@ -575,6 +575,14 @@ video {
   display: flex;
 }
 
+.table {
+  display: table;
+}
+
+.hidden {
+  display: none;
+}
+
 .h-14 {
   height: 3.5rem;
 }
