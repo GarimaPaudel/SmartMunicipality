@@ -12,13 +12,14 @@
             <p class="text-center text-blue-600 text-4xl font-serif font-semibold cursor-pointer" >Report Problem</p>
         </div>
         <div class=" flex justify-center mt-10 ">
-            <form action="" method="post" class=" bg-white shadow-2xl rounded-lg ">
+            <form action="process.php" method="post" class=" bg-white shadow-2xl rounded-lg ">
                 <div>
                     <label for="Problem Category" class=" text-xl m-3">Choose the category</label>
                     <select name="problemcat" id="problemcat" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2">
                         <option value = "education">Education</option>
                         <option value = "infrastructures">Infrastructures</option>
                         <option value = "electricity">Electricity</option>
+                        <option value = "agriculture">Agriculture </option>
                         <option value = "land use">Land Use</option>
                         <option value = "health">Health</option>
                         <option value = "water supply">Water Supply</option>
@@ -67,12 +68,48 @@
                 </div>
             </form>
         </div>
-        
+        <?php 
+    include('map.php');
+    ?>
     </main>
+
+   
     <footer>
-        <?php
-        include('footer.php');
-        ?>
+  
+
     </footer>
 </body>
 </html>
+<script>
+        // Get the address input field
+        const addressInput = document.getElementById('address');
+        // Get the latitude and longitude input fields
+        const latitudeInput = document.getElementById('latitude');
+        const longitudeInput = document.getElementById('longitude');
+
+        // Disable the address input field initially
+        addressInput.disabled = true;
+
+        // Add event listeners to the radio buttons
+        document.getElementById('currentLocationOption').addEventListener('change', function() {
+            addressInput.disabled = true;
+        });
+
+        document.getElementById('customLocationOption').addEventListener('change', function() {
+            addressInput.disabled = false;
+        });
+
+        // Get current location and populate latitude and longitude fields
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    const { latitude, longitude } = position.coords;
+                    latitudeInput.value = latitude;
+                    longitudeInput.value = longitude;
+                },
+                function(error) {
+                    console.log(error);
+                }
+            );
+        }
+    </script>
