@@ -22,19 +22,19 @@ include('db.php');
     <div class=" flex justify-center mt-16 ">
         <form action="" method="POST" class=" bg-white shadow-2xl rounded-lg " >
           <label for="name" class="m-3" >Full Name</label> <br>
-          <input type="text" id="name" name= "name" placeholder="BLOCK LETTER" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2"> <br>
+          <input type="text" id="name" name= "name" placeholder="BLOCK LETTER" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2"required> <br>
           
           <label for="mail" class="m-3">Email Address</label> <br>
-          <input type="email" id="email" name = "email" placeholder="@gmail.com" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2" > <br>
+          <input type="email" id="email" name = "email" placeholder="@gmail.com" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2"required > <br>
           
           <label for="address" class="m-3" >Address</label> <br>
-          <input type="text" id="address" name = "address" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2" name > <br>
+          <input type="text" id="address" name = "address" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2" required > <br>
           
           <label for="pass" class="m-3">Password</label> <br>
-          <input type="password" id="password" name = "password" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2" > <br>
+          <input type="password" id="password" name = "password" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2" required> <br>
           
           <label for="citizen" class="m-3">Citizenship Number</label> <br>
-          <input type="text" id="cno" name = "cno" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2" > <br>
+          <input type="text" id="cno" name = "cno" class="h-14 w-80 rounded-md m-3 border-gray-400 border-2" required> <br>
           
           <div class=" flex items-center justify-center ">
           <input type="submit" value="Register" name = "register" class="bg-lime-500 text-center text-white font-semibold text-xl h-14 w-52 rounded-md hover:bg-lime-600 items-center mx-auto "   >

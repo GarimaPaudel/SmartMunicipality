@@ -1,7 +1,7 @@
 <?php
 
 $conn = mysqli_connect('localhost', 'root', '', 'hackfest');
-$query = "SELECT latitude, longitude, problem_category AS category FROM issues where emergency_status='emergency'"; 
+$query = "SELECT latitude, longitude, problem_category AS category FROM issues "; 
 $result = mysqli_query($conn, $query);
 
 $issueData = array();

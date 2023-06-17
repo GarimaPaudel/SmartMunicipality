@@ -20,8 +20,8 @@ include('db.php');
         <div class=" flex justify-center  basis-5/12 ">
             <form action="" method="post" class=" bg-white shadow-2xl rounded-lg mt-16 h-96 w-2/6" >
                 <div class="flex flex-col justify-center items-center">
-                <input type="email" name="email" id="mail" placeholder="Email" class="h-14 w-80 rounded-md mt-14 border-gray-400 border-2"> <br> <br>
-                <input type="password" name="pass" id="pass" placeholder="Password" class="h-14 w-80 rounded-md border-gray-400 border-2">  </div> <br> <br>
+                <input type="email" name="email" id="mail" placeholder="Email" class="h-14 w-80 rounded-md mt-14 border-gray-400 border-2" required> <br> <br>
+                <input type="password" name="pass" id="pass" placeholder="Password" class="h-14 w-80 rounded-md border-gray-400 border-2" required>  </div> <br> <br>
                 <div class=" flex items-center justify-center ">
                     <input type="submit" name="login" value="Log In" class="bg-lime-600 text-white text-center font-semibold text-xl h-14 w-52 rounded-md hover:bg-lime-700 items-center mx-auto  " >
                     

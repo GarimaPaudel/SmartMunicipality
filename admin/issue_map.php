@@ -14,7 +14,12 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT latitude,longitude, problem_category from issues WHERE  id='40'" ;
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+
+}
+
+$query = "SELECT latitude,longitude, problem_category from issues WHERE  id='$id'" ;
 $result = mysqli_query($conn,$query);
 $issueData = array();
 while ($row = mysqli_fetch_assoc($result)) {
