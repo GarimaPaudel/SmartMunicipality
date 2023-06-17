@@ -21,15 +21,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <script>
-        // Create a map centered on a default location
+        // Creating a map centered on a default location
         var map = L.map('map').setView([0, 0], 13);
 
-        // Add the OpenStreetMap tile layer
+        // Adding the OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        // Get the current location of the user
+        // Getthing the current location of the user
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showLocation);
         } else {
