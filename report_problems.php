@@ -1,4 +1,12 @@
-<?php   ?>
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+    header("Location:login.php");
+    echo "<script>alert('You must log in first')</script>";
+}
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -9,6 +17,7 @@
     <title>Report your problem here</title>
 </head>
 <body>
+    <?php include('nav.php'); ?>
     <h2>Report your Problem</h2>
     <form method = "POST" action = "process.php" enctype="multipart/form-data">
     <label for="Problem Category">Choose the category</label>
@@ -28,7 +37,7 @@
 
 
      <textarea id="problem" name="problem" rows="4" cols="50">Explain your problem here</textarea>
-
+     <br><br>
      <input type="file" name="imageFile"><br><br>
 
      How much emergency is your problem?<br>
